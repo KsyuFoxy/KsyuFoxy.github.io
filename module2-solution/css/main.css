@@ -1,0 +1,145 @@
+** {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding: 20px;
+
+}
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.row {
+    width: 100%;
+}
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-12 {
+    float: left;
+}
+.col-xs-1 {
+    width: 8.33%;
+}
+.col-xs-2 {
+    width: 16.66%;
+}
+.col-xs-3 {
+    width: 25%;
+}
+.col-xs-4 {
+    width: 33%;
+}
+.col-xs-5 {
+    width: 41.66%;
+}
+.col-xs-6 {
+    width: 50%;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+.section {
+    position: relative;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: grey;
+    margin-bottom: 15px;
+}
+.section-header {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    position: absolute;
+    right: 0;
+    width: 30%;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+}
+.section-header-chicken {
+    background-color: palevioletred;
+}
+.section-header-beef {
+    background-color: royalblue;
+    color: white;
+}
+.section-header-sushi {
+    background-color: darkseagreen;
+}
+
+.section-text {
+    margin: 40px 10px 10px 10px;
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-12 {
+        float: left;
+    }
+    .col-md-1 {
+        width: 8.33%;
+    }
+    .col-md-2 {
+        width: 16.66%;
+    }
+    .col-md-3 {
+        width: 25%;
+    }
+    .col-md-4 {
+        width: 33%;
+    }
+    .col-md-5 {
+        width: 41.66%;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+    .col-md-12 {
+        width: 100%;
+    }
+    h1 {
+        margin: 10px 0 20px 0;
+    }
+     .section {
+        margin: 0 5px 10px 5px;
+    }
+    .section-header-sushi {
+        width: 15%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-12 {
+        float: left;
+    }
+    .col-lg-1 {
+        width: 8.33%;
+    }
+    .col-lg-2 {
+        width: 16.66%;
+    }
+    .col-lg-3 {
+        width: 25%;
+    }
+    .col-lg-4 {
+        width: 33%;
+    }
+    .col-lg-5 {
+        width: 41.66%;
+    }
+    .col-lg-6 {
+        width: 50%;
+    }
+    .col-lg-12 {
+        width: 100%;
+    }
+    h1 {
+       margin: 20px 0 40px 0;
+    }
+    .section {
+        margin: 0 10px;
+    }
+}
