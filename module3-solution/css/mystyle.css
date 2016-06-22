@@ -14,7 +14,6 @@
     border-bottom: 1px solid #000000;
 }
 #collapsable-nav .our-menu li a{
-    text-align: center;
     color: #000000;
 }
 
@@ -60,18 +59,12 @@
     margin: 0 -15px;
 }
 
-.menu-text {
-    background-color: grey;
-    margin: 20px;
-    padding: 5px 20px
-}
-
 .container-menu {
     margin-top: 20px;
 }
 .container h2 {
-    text-align: center;
     color: #000000;
+    margin-bottom: 30px;
 }
 .menu-text-head {
     padding-bottom: 20px;
@@ -89,4 +82,8 @@ p {
 
 .section {
     height: 1000px;
+    background-color: grey;
+    margin: 20px;
+    padding: 5px 20px
+
 }
