@@ -1,0 +1,110 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../../static/style.css">
+<title> — Portfolio</title>
+<body>
+  <header>
+    <div class="row">
+        <div class="col-md-8 col-xs-12">
+            <a href="/" class="home-page-logo">
+                <h1 class="Logo">Oksana Kondratiuk</h1>
+                <p class="profession">web & graphic designer</p>
+            </a>
+        </div>
+        <div class="col-md-4 col-xs-12 nav-menu">
+            <nav>
+              <ul class="nav navbar-nav">
+                
+                  <li
+                      
+                          class="main-menu"
+                      
+                  >
+                      <a  href="../../about/">About</a>
+                  </li>
+                
+                  <li
+                      
+                          class="main-menu"
+                      
+                  >
+                      <a  href="../../portfolio/">Portfolio</a>
+                  </li>
+                
+                  <li
+                      
+                          class="main-menu"
+                      
+                  >
+                      <a  href="../../contact/">Contact</a>
+                  </li>
+                
+              </ul>
+            </nav>
+        </div>
+    </div>
+  </header>
+  <div class="container">
+    
+  <h2></h2>
+  <h2 class="Photo-class">Buildings</h2>
+
+<div class="PhotoStructure">
+    <img onclick="showMyModal('/static/img/works/Buildings/Castle1.jpg')" class="Nature-Img-Horizontal" src='/static/img/works/Buildings/Castle1.jpg'/>
+    <img onclick="showMyModal('/static/img/works/Buildings/Fortress1.jpg', 'high')" class="Nature-Img-Vertical" src='/static/img/works/Buildings/Fortress1.jpg'/>
+    <img onclick="showMyModal('/static/img/works/Buildings/Munchen1.jpg', 'high')" class="Nature-Img-Vertical" src='/static/img/works/Buildings/Munchen1.jpg'/>
+    <img onclick="showMyModal('/static/img/works/Buildings/Utrecht1.jpg')" class="Nature-Img-Horizontal" src='/static/img/works/Buildings/Utrecht1.jpg'/>
+    <img onclick="showMyModal('/static/img/works/Buildings/Amster1.jpg')" class="Nature-Img-Horizontal" src='/static/img/works/Buildings/Amster1.jpg'/>
+
+</div>
+
+   <div id="myModal" class="modal">
+
+      <div id='modalContent' class="modal-content">
+        <span class="close">x</span>
+         <img id='modalImg' class="modal-img" src=''/>
+      </div>
+
+    </div>
+
+<script>
+
+    var modal = document.getElementById('myModal');
+    var modalContent = document.getElementById('modalContent');
+
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    function showMyModal(src, type) {
+        var modalImg = document.getElementById('modalImg');
+        modal.style.display = "block";
+        if (type === 'high') {
+            modalImg.style.height = '700px';
+            modalContent.style.width = '35%';
+        } else {
+            modalContent.style.width = '70%';
+        }
+        modalImg.src = src;
+
+    }
+</script>
+
+  </div>
+  <footer>
+      All material &copy; copyright by Oksana Kondratiuk. All rights reserved.
+  </footer>
+</body>
