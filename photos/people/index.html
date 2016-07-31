@@ -3,7 +3,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
 <!-- Latest compiled and minified JavaScript -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-81684922-1', 'auto');
+  ga('send', 'pageview');
+</script>
 <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../../static/style.css">
@@ -39,6 +48,14 @@
                 
                   <li
                       
+                        class="main-menu active"
+                      
+                  >
+                      <a  href="../../photos/">Photos</a>
+                  </li>
+                
+                  <li
+                      
                           class="main-menu"
                       
                   >
@@ -57,16 +74,53 @@
 
 <div class="PhotoStructure">
 
-    <img class="Nature-Img-Vertical" src='/static/img/works/People/Karnaval3.jpg'/>
-    <img class="Nature-Img-Horizontal" src='/static/img/works/People/Karnaval1.jpg'/>
-    <img class="Nature-Img-Horizontal" src='/static/img/works/People/Karnaval2.jpg'/>
-     <img class="Nature-Img-Horizontal" src='/static/img/works/People/Karnaval4.jpg'/>
-    <img class="Nature-Img-Horizontal" src='/static/img/works/People/Karnaval5.jpg'/>
+    <img onclick="showMyModal('/static/img/works/People/Karnaval3.jpg')" class="Nature-Img-Horizontal" src='/static/img/works/People/Karnaval3.jpg'/>
+    <img onclick="showMyModal('/static/img/works/People/Karnaval1.jpg', 'high')" class="Nature-Img-Vertical" src='/static/img/works/People/Karnaval1.jpg'/>
+    <img onclick="showMyModal('/static/img/works/People/Karnaval2.jpg', 'high')" class="Nature-Img-Vertical" src='/static/img/works/People/Karnaval2.jpg'/>
+    <img onclick="showMyModal('/static/img/works/People/Karnaval4.jpg', 'high')" class="Nature-Img-Vertical" src='/static/img/works/People/Karnaval4.jpg'/>
+    <img onclick="showMyModal('/static/img/works/People/Karnaval5.jpg', 'high')" class="Nature-Img-Vertical" src='/static/img/works/People/Karnaval5.jpg'/>
 
 </div>
 
+ <div id="myModal" class="modal">
+
+      <div id='modalContent' class="modal-content">
+        <span class="close">x</span>
+         <img id='modalImg' class="modal-img" src=''/>
+      </div>
+
+    </div>
+
+<script>
+
+    var modal = document.getElementById('myModal');
+    var modalContent = document.getElementById('modalContent');
+
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    function showMyModal(src, type) {
+        var modalImg = document.getElementById('modalImg');
+        modal.style.display = "block";
+        if (type === 'high') {
+            modalImg.style.height = '700px';
+            modalContent.style.width = '35%';
+        } else {
+            modalContent.style.width = '70%';
+        }
+        modalImg.src = src;
+
+    }
+</script>
+
   </div>
-  <footer>
-      All material &copy; copyright by Oksana Kondratiuk. All rights reserved.
-  </footer>
+  
 </body>
