@@ -48,7 +48,7 @@ footer {
     margin: 0 auto;
     color: #a3a4c5;
     opacity: 0.1;
-    bottom: -10px;
+    bottom: 0px;
 }
 .home-page-image {
     display: flex;
