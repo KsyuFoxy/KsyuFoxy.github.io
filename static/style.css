@@ -32,7 +32,6 @@ a:hover {
 }
 
 header {
-    width: 1200px;
     margin: 0 auto;
 
 }
@@ -48,23 +47,45 @@ footer {
     margin: 0 auto;
     color: #a3a4c5;
     opacity: 0.1;
-    bottom: 0px;
+    bottom: 0;
+}
+
+#container {
+    position: relative;
+    top: -100px;
+    width: 80%;
+    height: 450px;
+    float: right;
+    z-index: -1;
+}
+.LogoCircle {
+    float:left;
+}
+.LogoCircle-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.LogoEffect {
+   position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 img.LogoImg {
-    left: 12.9%;
-    top: -74px;
-    position: absolute;
-    width: 90%;
-    z-index: -4;
+    width: 100%;
 }
 img.LogoEffect {
-    position: absolute;
-    width: 80%;
-    left: 200px;
-    top: -152px;
-    opacity: 0.3;
-    z-index: -1;
+    width: 100%;
+}
+img.AboutPageImgSmall {
+        width: 90%;
+    }
+
+.profession-small {
+    margin-left: 25px;
+    margin-top: -12px;
+    color: #a3a4c5;
 }
 
 .DotsEffect {
@@ -129,14 +150,57 @@ h2 {
     color: #ffffff;
 }
 
-header h1.Logo {
+header h1.Logo, h1.Logo-small {
     font-family: 'Asenine Wide', Regular;
     font-size: 52px;
+    margin-left: 30px;
+    z-index: 1;
+}
+
+
+
+.container-nav>.collapsing {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background-color: #100c19;
+}
+.container-nav>.navbar-collapse.in {
+    position: absolute;
+    display: block;
+    background-color: #100c19;
+    opacity: 0.9;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar-nav li a:hover {
+    background: transparent;
+}
+
+
+.navbar-toggle {
+    border-color: #ffffff;
+    margin-top: -60px;
+    margin-right: 30px;
+
+}
+.navbar-toggle .icon-bar {
+    background-color: #ffffff;
+    width: 30px;
 }
 
 p.profession {
     color: #a3a4c5;
     margin: -20px 0 0 380px;
+    z-index: 1;
+}
+.TextAbout p {
+    font-size: 16px;
+    text-indent: 20px;
+}
+.TextAbout {
+    margin-top: 120px;
 }
 
 header nav ul {
@@ -165,38 +229,35 @@ li.main-menu > a:hover {
 
 .nav-menu {
     margin-top: 30px;
+     z-index: 1;
+}
+
+.contacts-page {
+    top: 110px;
+    z-index: 1;
 }
 
 .contacts {
-    margin-top: 180px;
-    padding-left: 200px;
+    text-align: center;
 }
 
 .contacts-disc {
-    margin-top: 40px;
+    width: 600px;
+    margin: 40px 0 40px -40px;
     font-size: 16px;
+    text-align: center;
 }
 img.ContactPageImg {
-    position: fixed;
-    width: 70%;
-    margin-top: -20px;
-    left: 350px;
+    width: 190%;
+    margin-left: -275px;
+    margin-top: -80px;
     z-index: -1;
 }
 img.AboutPageImg {
-    position: fixed;
-    width: 80%;
-    margin-left: -40px;
-    z-index: -1;
+    width: 170%;
+    z-index: -10;
 }
-.TextAbout {
-    width: 490px;
-    margin-top: 120px;
-    margin-left: 80px;
-    font-size: 16px;
-   font-weight: 100;
-    text-indent: 30px;
-}
+
 .MyPhoto {
     width: 70%;
     margin-left: 65px;
@@ -246,14 +307,14 @@ img.AboutPageImg {
     background-color: black;
     opacity: 0.3;
 }
-.flex-col:hover span {
+.flex-col a:hover span {
     display: block;
 }
 
 .flex-col span {
      position: absolute;
-    display: none;
-    font-size: 30px;
+     display: none;
+     font-size: 30px;
      text-decoration: none;
 }
 .flex-col-People span {
@@ -278,13 +339,14 @@ img.AboutPageImg {
     color: #ffffff;
 }
 
+.ContactContainer {
+    top: 60px;
+}
 
 .Container-ContactImg {
     display: flex;
-    /*justify-content: center;*/
-   margin-left: 110px;
-    margin-top: 40px;
-    height: 50px;
+    justify-content: center;
+    margin: 20px auto;
 }
 .Container-ContactImg a {
     display: block;
@@ -302,7 +364,7 @@ img.AboutPageImg {
 }
 .Container-ContactImg img:hover {
     width: 50px;
-    bottom: 5px;
+    top: -10px;
     left: -5px;
 }
 
@@ -364,12 +426,10 @@ img.AboutPageImg {
 .PhotoStructure img {
     cursor: pointer;
 }
-
 .Nature-Img-Vertical:hover, .Nature-Img-Horizontal:hover, .Nature-Img:hover {
     color: #ffffff;
     opacity: 0.7;
 }
-
 
 .Nature-Img {
     width: 46.5%;
@@ -409,10 +469,9 @@ img.AboutPageImg {
 
 /* Modal Content/Box */
 .modal-content {
-    width: 47%;
     position: absolute;
     background-color: #ffffff;
-    top: 40px;
+    top: 10px;
     border: 1px solid #888;
     left:0;
     right:0;
@@ -423,6 +482,10 @@ img.AboutPageImg {
 .modal-img {
     width: 100%;
     border-radius: 6px;
+}
+
+.modal-img:hover {
+    cursor: zoom-out;
 }
 
 /* The Close Button */
@@ -440,4 +503,299 @@ img.AboutPageImg {
     color: #ffffff;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media screen and (max-width:767px) {
+    .profession, .Logo, .nav-menu {display: none;}
+    .portfolio-img {display: none;}
+}
+
+@media screen and (min-width:768px) {
+    .profession-small, .Logo-small, .navbar-header {display: none;}
+    .portfolio-imgSmall {display: none;}
+}
+
+
+@media screen and (max-width:650px) {
+    .MyPhotoImg {
+        min-height: 200px;
+        width: 100%;
+    }
+    .AboutPageImg {
+        display: none;
+    }
+    #container {
+        top: -40px;
+    }
+    .navbar-nav li a {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 30px;
+    }
+ .TextAbout {
+        width: auto;
+        margin-top: 10px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+ .TextAbout p {
+       font-size: 14px;
+    }
+    .container-works {
+        display: block;
+        width: 100%;
+        position: relative;
+        margin-top: -30px;
+        margin-left: 0;
+    }
+    .container-works-name {
+        display: table;
+        margin: 0 auto;
+    }
+    .container-work-img {
+        text-align: -webkit-center;
+        margin-top: 15px;
+    }
+    .ContactContainer {
+        top: 120px;
+    }
+    .contacts-page {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+    .contacts-page h2 {
+        font-size: 30px;
+    }
+    .contacts-page p {
+        font-size: 14px;
+    }
+    .Container-ContactImg img {
+        width: 40%;
+    }
+    .contacts-disc {
+        margin: 20px 0 30px 0px;
+    }
+    .ContactPageImgDiv {
+        position: absolute;
+        z-index: -2;
+    }
+    img.ContactPageImg {
+        width: 90%;
+        margin-left: 78px;
+        margin-top: -160px;
+    }
+    .flex-row {
+        display: block;
+        width: 65%;
+       margin: auto;
+    }
+    .portfolio-imgSmall {
+        width: 100%;
+    }
+    .flex-col span {
+        text-align: center;
+     font-size: 20px;
+    }
+      .flex-col-People {
+        display: none;
+    }
+    .flex-col-Big {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:651px) and (max-width:767px) {
+    .container {
+        margin: 0;
+    }
+     #container {
+        top: -40px;
+    }
+    .AboutPageImg {
+        display: none;
+    }
+    .navbar-nav li a {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 30px;
+    }
+    .TextAbout {
+        width: auto;
+        margin-top: 0;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+    .TextAbout p {
+       font-size: 14px;
+    }
+    .container-works {
+        display: block;
+        width: 100%;
+        position: relative;
+        margin-top: -20px;
+        margin-left: 0;
+    }
+    .container-works-name {
+        display: table;
+        margin: 0 auto;
+    }
+    .container-work-img {
+        text-align: -webkit-center;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+     .ContactContainer {
+        top: 120px;
+    }
+    .contacts-page {
+        position: absolute;
+        top: 50px;
+        z-index: -1;
+    }
+    .contacts-page h2 {
+        font-size: 35px;
+    }
+    .contacts-page p {
+        font-size: 16px;
+    }
+    .Container-ContactImg img {
+        width: 40%;
+    }
+    .contacts-disc {
+        margin: 30px 0 40px 30px;
+    }
+    .ContactPageImgDiv {
+        position: absolute;
+        z-index: -2;
+    }
+    img.ContactPageImg {
+        width: 90%;
+        margin-left: 78px;
+        margin-top: -160px;
+    }
+    .portfolio-container {
+       display: block;
+    }
+
+    .flex-row {
+        display: block;
+        width: 65%;
+       margin: auto;
+    }
+    .flex-col span {
+        text-align: center;
+     font-size: 30px;
+    }
+    .portfolio-imgSmall {
+        width: 100%;
+    }
+    .flex-col-People {
+        display: none;
+    }
+    .flex-col-Big {
+        display: none;
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+    header h1.Logo {
+        font-size: 40px;
+        margin-left: 20px;
+    }
+    p.profession {
+        font-size: 11px;
+        margin-left: 300px;
+    }
+    .navbar-nav li a {
+        padding: 7px;
+    }
+    .AboutPage .MyPhotoImg img.AboutPageImg {
+        width: 200%;
+    }
+    .container {
+        width: auto;
+        top: 60px;
+        margin: 0 15px;
+    }
+    .container-works h2 {
+       margin-top: 10px;
+    }
+    .AboutPage .TextAbout {
+        margin-left: 0;
+        margin-top: 60px;
+    }
+    .TextAbout p {
+       font-size: 14px;
+    }
+     .ContactContainer {
+        top: 120px;
+    }
+    .contacts-page {
+        position: absolute;
+        top: -40px;
+        left: -140px;
+        z-index: -1;
+    }
+    .contacts-disc {
+        width: auto;
+        text-align: center;
+        margin: 30px 0;
+    }
+    .ContactPageImgDiv {
+        width: auto;
+        position: absolute;
+        z-index: -2;
+    }
+    img.ContactPageImg {
+        width: 100%;
+        margin-left: 78px;
+        margin-top: -195px;
+    }
+    .flex-col-Small {
+        display: none;
+    }
+
+}
+@media screen and (min-width:992px) and (max-width:1200px) {
+    .col-md-8 {
+        width: 60%;
+    }
+    .col-md-4 {
+        width: 40%;
+    }
+    header h1.Logo {
+        font-size: 44px;
+    }
+    p.profession {
+        margin-left: 340px;
+    }
+    .container-works h2 {
+       margin-top: 10px;
+    }
+    .MyPhotoImg {
+        top: 40px;
+    }
+    .container {
+        width: auto;
+    }
+    img.ContactPageImg {
+        width: 160%;
+        margin-left: -250px;
+        margin-top: -83px;
+    }
+    .contacts-page {
+        top: 110px;
+    }
+    .flex-col-Small {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    .flex-col-Small {
+        display: none;
+    }
 }
